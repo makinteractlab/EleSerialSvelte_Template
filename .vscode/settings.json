@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "*.svelte": "html"
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "html"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+}

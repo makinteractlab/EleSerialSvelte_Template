@@ -1,5 +1,6 @@
 <script>
   import Serial from './Serial.svelte';
+
   export let name;
 </script>
 

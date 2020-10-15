@@ -1,30 +1,32 @@
 {
-    "name": "electron-serialport",
-    "version": "1.0.1",
-    "description": "A minimal Electron application with node serialport and Svelte",
-    "main": "src/index.js",
-    "scripts": {
-        "install": "electron-rebuild",
-        "start": "concurrently \"npm:svelte-dev\" \"electron-forge start\"",
-        "package": "electron-forge package",
-        "make": "electron-forge make",
-        "publish": "electron-forge publish",
-        "lint": "echo \"No linting configured\"",
-        "svelte-build": "rollup -c",
-        "svelte-dev": "rollup -c -w",
-        "svelte-start": "sirv public"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:makinteractlab/EleSerialSvelte_Template.git"
-    },
-    "keywords": [
-        "Electron",
-        "svelte"
-    ],
-    "author": "Author name",
-    "license": "MIT",
-    "config": {
+  "name": "electron-serialport",
+  "version": "1.0.1",
+  "description": "A minimal Electron application with node serialport and Svelte",
+  "main": "src/index.js",
+  "scripts": {
+    "install": "electron-rebuild",
+    "start": "concurrently \"npm:svelte-dev\" \"electron-forge start\"",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "svelte-build": "rollup -c",
+    "svelte-dev": "rollup -c -w",
+    "svelte-start": "sirv public",
+    "fix": "npx eslint --fix \"{,!(node_modules|public)/**/}*.{js,svelte}\"",
+    "format": "npx prettier --write \"{,!(node_modules|public)/**/}*.{js,svelte}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:makinteractlab/EleSerialSvelte_Template.git"
+  },
+  "keywords": [
+    "Electron",
+    "svelte"
+  ],
+  "author": "Author name",
+  "license": "MIT",
+  "config": {
     "forge": {
       "packagerConfig": {},
       "makers": [
@@ -50,30 +52,36 @@
         }
       ]
     }
-    },
-    "devDependencies": {
-        "electron": "^5.0.5",
-        "electron-rebuild": "^1.8.5",
-        "@electron-forge/cli": "^6.0.0-beta.53",
-        "@electron-forge/maker-deb": "^6.0.0-beta.53",
-        "@electron-forge/maker-rpm": "^6.0.0-beta.53",
-        "@electron-forge/maker-squirrel": "^6.0.0-beta.53",
-        "@electron-forge/maker-zip": "^6.0.0-beta.53",
-        "@rollup/plugin-commonjs": "^11.0.0",
-        "@rollup/plugin-node-resolve": "^7.0.0",
-        "concurrently": "^5.1.0",
-        "rollup": "^1.32.0",
-        "rollup-plugin-livereload": "^1.0.0",
-        "rollup-plugin-svelte": "^5.0.3",
-        "rollup-plugin-terser": "^5.1.2",
-        "svelte": "^3.19.1"
-    },
-    "dependencies": {
-        "electron-reload": "^1.5.0",
-        "electron-squirrel-startup": "^1.0.0",
-        "jquery": "^3.5.1",
-        "serialport": "^7.1.5",
-        "sirv-cli": "^0.4.4",
-        "tableify": "^1.1.0"
-    }
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.53",
+    "@electron-forge/maker-deb": "^6.0.0-beta.53",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.53",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.53",
+    "@electron-forge/maker-zip": "^6.0.0-beta.53",
+    "@rollup/plugin-commonjs": "^11.0.0",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "concurrently": "^5.1.0",
+    "electron": "^5.0.5",
+    "electron-rebuild": "^1.8.5",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-svelte3": "^2.7.3",
+    "prettier": "^2.1.2",
+    "prettier-plugin-svelte": "^1.4.1",
+    "rollup": "^1.32.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "svelte": "^3.19.1"
+  },
+  "dependencies": {
+    "electron-reload": "^1.5.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "jquery": "^3.5.1",
+    "serialport": "^7.1.5",
+    "sirv-cli": "^0.4.4",
+    "tableify": "^1.1.0"
+  }
 }

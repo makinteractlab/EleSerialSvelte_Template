@@ -1,13 +1,15 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
 // Live Reload
 require('electron-reload')(__dirname, {
   electron: path.join(__dirname, '../node_modules', '.bin', 'electron'),
-  awaitWriteFinish: true
+  awaitWriteFinish: true,
 });
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
+// eslint-disable-next-line global-require
 if (require('electron-squirrel-startup')) {
   // eslint-disable-line global-require
   app.quit();
@@ -20,8 +22,8 @@ const createWindow = () => {
     height: 800,
     webPreferences: {
       nodeIntegration: true,
-      preload: path.join(__dirname, 'preload.js')
-    }
+      preload: path.join(__dirname, 'preload.js'),
+    },
   });
 
   // and load the index.html of the app.

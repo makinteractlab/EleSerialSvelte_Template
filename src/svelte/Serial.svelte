@@ -10,9 +10,8 @@
     if (err) {
       console.log('No ports was found');
       return;
-    } else {
-      console.log('No ports was found');
     }
+    console.log('No ports was found');
 
     if (ports.length === 0) {
       console.log('No ports was found');
